@@ -1,0 +1,245 @@
+* {
+	font-family: 微軟正黑體;
+}
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+a {
+	color: initial;
+	text-decoration: initial;
+}
+
+.font-green {
+	color: green;
+}
+
+.icon img {
+	vertical-align: middle;
+}
+
+.card-mode {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition: .5s ease-in-out;
+}
+
+.card-mode.flip {
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	width: 380px;
+	height: 550px;
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	background-color: snow;
+	overflow: hidden;
+	transition: .3s;
+	transform-style: preserve-3d;
+}
+
+.card-front {
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+.card-back {
+	transform: rotateY(180deg);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	padding: 1rem;
+}
+
+.card-front:hover  {
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+	transform: translate(-5px, -5px);
+}
+
+.card-back:hover {
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+	transform: translate(5px, -5px) rotateY(180deg);
+}
+
+.top {
+	background-image: url(http://www.designwant.com/upload/images/170720-7_08.jpg);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	height: 330px;
+}
+
+.top .name {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 30px 15px 15px;
+	letter-spacing: 2px;
+	color: snow;
+	font-weight: bolder;
+	background: linear-gradient(transparent 0%, black 100%);
+	box-sizing: border-box;
+}
+
+.top .name .small-text {
+	font-size: .9rem;
+}
+
+.top .tag {
+	position: absolute;
+	right: 20px;
+	width: 25px;
+	height: 30px;
+	background-color: #ff7526;
+}
+
+.top .tag:before,
+.tag:after {
+	position: absolute;
+	bottom: -12px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px;
+}
+
+.top .tag:before {
+	left: 0;
+	border-color: #ff7526 transparent transparent #ff7526;
+}
+
+.top .tag:after {
+	right: 0;
+	border-color: #ff7526 #ff7526 transparent transparent;
+}
+
+.cirButton {
+	position: absolute;
+	right: 30px;
+	bottom: -20px;
+	width: 50px;
+	height: 50px;
+	background-color: #ff7526;
+	border-radius: 50%;
+	border: 1px solid #ff7526;
+	transition: .3s ease;
+}
+
+.cirButton:before,
+.cirButton:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	content: "";
+	width: 25px;
+	height: 3px;
+	background-color: white;
+}
+
+.cirButton:after {
+	transform: rotate(90deg);
+}
+
+.cirButton:hover {
+	background-color: snow;
+	border: 1px solid #ff7526;
+	transform: rotate(180deg);
+	transition: .3s ease;
+}
+
+.cirButton:hover:before,
+.cirButton:hover:after {
+	background-color: #ff7526;
+}
+
+.bottom {
+	padding: 10px 20px 20px 20px;
+}
+
+.bottom li {
+	padding: 5px 0;
+}
+
+.bottom h3,
+p {
+	display: inline-block;
+	margin: 0;
+}
+
+.bottom ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.buttons.center {
+	justify-content: center;
+}
+
+.buttons .btn {
+	padding: 10px 30px;
+	border-radius: 5px;
+}
+
+.btnWebsite {
+	color: snow;
+	background-color: #ff7526;
+	border: 1px solid #ff7526;
+	transition: .3s;
+}
+
+.btnWebsite:hover {
+	color: #ff7526;
+	background-color: snow;
+	border: 1px solid #ff7526;
+}
+
+.btnNews {
+	background-color: snow;
+	border: 1px solid gray;
+	transition: .3s;
+}
+
+.btnNews:hover {
+	color: white;
+	background-color: gray;
+}
+
+.card-back ul {
+	list-style: none;
+	padding: 0;
+}
+
+.btnFilpBack {
+	color: snow;
+	background-color: #ff7526;
+	border: 1px solid #ff7526;
+	transition: .3s;
+}
